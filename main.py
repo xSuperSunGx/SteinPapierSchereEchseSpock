@@ -87,17 +87,18 @@ typegen = TypeGen()
 
 def get_type_input():
     print(f"Wählen sie einen Typ aus: ")
-    for i in range(typegen.get_big_ben()):
+    for i in range(len(typegen.get_big_ben())):
         print(f"({i+1}) -> {typegen.get_big_ben()[i]}")
     return input()
     new_line(1)
 
 def start():
     new_line(5)
-    print(f"{new_line(20)}Herzlich Willkommen beim Spiel")
+    new_minus_line()
+    print(f"{new_space(20)}Herzlich Willkommen beim Spiel")
+    print(f"{new_space(18)}Stein, Papier, Schere, Echse, Spock")
+    new_minus_line()
     new_line(2)
-    print(f"{new_space(16)}Stein, Papier, Schere, Echse, Spock")
-    new_line(5)
     print(f"Möchten Sie die Spielregeln öffnen? (Y/N)")
     answer = input()
     if answer == "Y" or answer == "y":
@@ -105,22 +106,22 @@ def start():
     new_line(30)
     answer = get_type_input()
     typegen.generate_random()
-    typegen.change_input(typegen.get_big_ben().index(int(answer)-1))
-
+    typegen.change_input(typegen.get_big_ben()[int(answer)-1])
     winner, equal = typegen.is_player_winner()
+    print(f"PC: {typegen.coop}")
+    print(f"DU: {typegen.input}")
+    new_line(1)
+
     if equal:
-        print("Gleichstand!!!!!")
-    else:
-        if winner:
-            print("GEWINNER!!!!!")
-        else:
-            print("VERLOREN!!!!!")
+        print(f"{new_space(4)}!!!!! GLEICHSTAND !!!!!")
+
+    return winner
 
 
 
 def new_line(index):
     for i in range(index):
-        print("\n")
+        print("")
 
 def new_space(index):
     str = ""
@@ -128,9 +129,16 @@ def new_space(index):
         str = str + " "
     return str
 
-def main():
-    start()
+def new_minus_line():
+    print("---------------------------------------------------------------------")
 
+def main():
+    winner, equal = start()
+    while not winner:
+        if not equal:
+            print(f"{new_space(4)}VERLOREN!!!!!")
+        winner, equal = start()
+    print(f"{new_space(4)}GEWINNER!!!!!")
 
 
 if __name__ == '__main__':
