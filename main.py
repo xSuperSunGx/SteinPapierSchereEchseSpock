@@ -115,7 +115,7 @@ def start():
     if equal:
         print(f"{new_space(4)}!!!!! GLEICHSTAND !!!!!")
 
-    return winner
+    return winner, equal
 
 
 
