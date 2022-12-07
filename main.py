@@ -1,6 +1,7 @@
+import json
 import random
 import webbrowser
-
+import sqlite3 as sql
 
 class TypeGen:
 
@@ -79,7 +80,6 @@ class TypeGen:
                     return False, True
 
 typegen = TypeGen()
-
 
 
 
