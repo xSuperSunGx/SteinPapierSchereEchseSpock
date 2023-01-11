@@ -4,5 +4,7 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="jdk" jdkName="Python 3.7 (SteinPapierSchereEchseSpock)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="SWP_RubnS" />
+    <orderEntry type="module" module-name="SteinPapierSchereEchseoSpock_Flask" />
   </component>
 </module>

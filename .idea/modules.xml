@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../SWP_RubnS/.idea/SWP_RubnS.iml" filepath="$PROJECT_DIR$/../SWP_RubnS/.idea/SWP_RubnS.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/SteinPapierSchereEchseSpock.iml" filepath="$PROJECT_DIR$/.idea/SteinPapierSchereEchseSpock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../SteinPapierSchereEchseoSpock_Flask/.idea/SteinPapierSchereEchseoSpock_Flask.iml" filepath="$PROJECT_DIR$/../SteinPapierSchereEchseoSpock_Flask/.idea/SteinPapierSchereEchseoSpock_Flask.iml" />
     </modules>
   </component>
 </project>
